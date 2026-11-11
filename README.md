@@ -1,9 +1,10 @@
-# Locked – by The Doomscrollers
+# Locked – Anti-Doomscrolling Study Monitor
 
-Hackathon project that helps you **stay locked in while studying** and keeps you off your phone.
-A webcam checks whether you are holding your phone or looking away from the screen, the phone's own tilt
-sensor (via **phyphox → MATLAB**) shows whether it has been picked up off the table, and an **Arduino**
-gives you feedback with an RGB LED and a vibration motor.
+*Hackathon project by The Doomscrollers*
+
+Detects when you pick up your phone or look away while studying, and nudges you back with an LED and vibration.
+A webcam (YOLOv8 + MediaPipe head pose) and the phone's tilt sensor (phyphox → MATLAB) decide if you're
+distracted; an Arduino shows green / yellow / red and vibrates if you stay distracted too long.
 
 ```
 Webcam + phone tilt -> Python (main.py) -> Arduino (LED + vibration)
